@@ -29,21 +29,21 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         listado = (ListView) findViewById(R.id.listado);
         categoria = new ArrayList<Categoria>();
-        categoria.add(new Categoria("Lunes", "Nublado        33c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("Martes", "Nublado       33c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("Mi�rcoles", "Soleado    45c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("Jueves", "Soleado       45c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("Viernes", "Soleado      45c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("S�bado", "Soleado       45c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("Domingo", "Nublado      33c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("Lunes", "Nublado        33c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("Lunes", "Nublado        33c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("Martes", "Nublado       33c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("Mi�rcoles", "Soleado    45c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("Jueves", "Soleado       45c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("Viernes", "Soleado      45c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("S�bado", "Soleado       45c", R.drawable.ic_launcher));
-        categoria.add(new Categoria("Domingo", "Nublado      33c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Lunes", "Nublado        27°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Martes", "Nublado       29°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Miércoles", "Soleado    30°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Jueves", "Soleado       31°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Viernes", "Lluvioso     25°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Sábado", "Soleado       30°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Domingo", "Lluvioso     27°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Lunes", "Nublado        27°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Lunes", "Nublado        29°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Martes", "Soleaddo      29°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Miércoles", "Soleado    28°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Jueves", "Soleado       30°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Viernes", "Nublado      30°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Sábado", "Soleado       40°c", R.drawable.ic_launcher));
+        categoria.add(new Categoria("Domingo", "Lluvioso     27°c", R.drawable.ic_launcher));
 
 
         Adaptador adapter = new Adaptador(categoria, MainActivity.this.getApplicationContext());
@@ -56,10 +56,10 @@ public class MainActivity extends Activity {
                                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                                                Categoria item = categoria.get(position);
-                                               Toast.makeText(getApplicationContext(), "Eligi� el D�a: " + item.getDia(), Toast.LENGTH_LONG).show();
+                                               Toast.makeText(getApplicationContext(), "Eligió el Día: " + item.getDia(), Toast.LENGTH_LONG).show();
                                                //String valor =(String)parent.getItemAtPosition(position);
                                                Intent nuevo = new Intent(MainActivity.this,SecondActivity.class);
-                                               nuevo.putExtra("d�as",item.getDia());
+                                               nuevo.putExtra("días",item.getDia());
                                                startActivity(nuevo);
 
                                            }
